@@ -1,20 +1,17 @@
-bye_times = 2
+bye = 0
 input = gets.chomp
-while bye_times <= 3
-
-  if input == "BYE"
-    bye_times = (bye_times + 1)
+while true
+  if input == 'BYE'
+    bye += 1
     puts "I CAN\'T HEAR YA, SONNY!!"
-    input = gets.chomp
-
   elsif input == input.upcase
-      puts "NO, NOT SINCE " + (1930 + rand(21)).to_s
-      input = gets.chomp
-
-    else
-      puts "HUH?! SPEAK UP, SONNY!"
-      input = gets.chomp
-    end
+    puts "NO, NOT SINCE " + (1930 + rand(21)).to_s
+  else
+    puts "HUH?! SPEAK UP, SONNY!"
+  end
+  input = gets.chomp
+  if (bye == 2 && input == 'BYE')
+    break
+  end
 end
-
 puts "IT\'S ALWAYS NICE TO HAVE YOU OVER!!"

@@ -7,8 +7,7 @@ words = gets.chomp
 while words != ''
   array.push words
   words = gets.chomp
-  if words == ''
-      puts array.sort
   end
 end
+puts array.sort
 puts 'The list above contains the words typed in alphabetical order.'
